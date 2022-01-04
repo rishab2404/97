@@ -23,7 +23,7 @@ def app(census_df):
   with beta_col2:
     if st.checkbox("View column data-type"):
       cols_name = st.selectbox("Select Column for data-type",list(census_df.columns))
-      st.table(cols_name.dtypes)
+      st.text(census_df[cols_name].dtype)
 
   # Add a checkbox in the third column followed by a selectbox which accepts the column name whose data needs to be displayed.
   with beta_col3:
